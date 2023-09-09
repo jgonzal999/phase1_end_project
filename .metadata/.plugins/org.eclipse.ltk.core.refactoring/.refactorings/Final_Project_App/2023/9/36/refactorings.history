@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BOperations.java&apos; to &apos;Phase1EndProject/src/phase1.basicapp.exception&apos;&#x0A;- Original project: &apos;Final_Project_App&apos;&#x0A;- Destination element: &apos;Phase1EndProject/src/phase1.basicapp.exception&apos;&#x0A;- Original element: &apos;main.BOperations.java&apos;" description="Copy compilation unit" destination="=Phase1EndProject/src&lt;phase1.basicapp.exception" element1="/src&lt;main{BOperations.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1694248628435" units="1" version="1.0"/>
+</session>
