@@ -9,10 +9,10 @@ public class Menus {
 		System.out.println("   ********************************************");
 	}
 	public void mainMenu() {
-		System.out.println("\nMain Menu:\n\n 1.List a directory\n 2.Operations\n\n 3.QUIT\n\nPlease, select an option:");
+		System.out.println("\nMAIN MENU\n---------\n\n 1.List a directory\n 2.Operations\n\n 3.QUIT\n\nPlease, select an option:");
 	}
 	public void operationsMenu() {
-		System.out.println("\nOperations Menu:\n\n 1.Add new file\n 2.Delete file\n 3.Search files\n\n 4.Main Menu\n\nPlease, select an option:");
+		System.out.println("\nOPERATIONS MENU\n---------------\n\n 1.Add new file\n 2.Delete file\n 3.Search files\n\n 4.Main Menu\n\nPlease, select an option:");
 	}
 	public void insertNew() {
 		System.out.println("Please, enter new file (if not included, it will be added extension .txt): ");
@@ -31,7 +31,9 @@ public class Menus {
 		System.out.println("Do you really want to quit the app? (y/n): ");
 	}
 	public void bye() {
+		System.out.println("   *****************************************************");
 		System.out.println("   *** Bye, thank you for use LockedMe.com products! ***");
+		System.out.println("   *****************************************************");
 	}
 	public void sorry() {
 		System.out.println("Sorry, try it again!");
