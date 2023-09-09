@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import phase1.basicapp.utility.Menus;
 import phase1.basicapp.utility.BussinessOperations;
-
+import phase1.basicapp.exception.ValueException;
 
 public class BasicApp {
 
@@ -22,6 +22,9 @@ public class BasicApp {
 				menu.mainMenu();
 				try {
 					op = sc.nextInt();
+					if (op<1 || op>3) {
+						throw new ValueException(" Sorry, please enter a value between 1 and 3");
+					}
 				}catch(Exception e) {
 					op=100;
 					sc.nextLine();
@@ -45,6 +48,9 @@ public class BasicApp {
 								menu.operationsMenu();
 								try {
 									op2 = sc.nextInt();
+									if (op2<1 || op2>4) {
+										throw new ValueException(" Sorry, please enter a value between 1 and 4");
+									}
 								}catch(Exception e) {
 									op2=100;
 									sc.nextLine();

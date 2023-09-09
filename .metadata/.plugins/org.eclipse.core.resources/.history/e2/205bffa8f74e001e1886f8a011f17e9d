@@ -1,0 +1,10 @@
+package phase1.basicapp.exception;
+
+public class AppException extends Exception {
+	public void BadValue() {
+		// TODO Auto-generated constructor stub
+	}
+	public void BadValue(String name){
+		super(name);
+	}
+}
