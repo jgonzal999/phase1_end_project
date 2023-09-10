@@ -151,7 +151,7 @@ public class BussinessOperationsE implements BOperationsE {
 				for (String fil: foundedfiles) System.out.println("   "+fil);
 				return true;
 			}else {
-				System.out.println(" Sorry, files not found (keyword: "+b+")");
+				System.out.println("\n Sorry, files not found (keyword: "+b+")");
 				return false;
 			}
 		}else {
@@ -169,7 +169,7 @@ public class BussinessOperationsE implements BOperationsE {
 				File file = new File(defdirectory+b);
 				if (file.exists() && file.getName().indexOf(".txt")>-1) {
 					FileOutputStream fos = new FileOutputStream(file.toString(),true);
-					System.out.println("Please enter text you want to write on the file (type %% to finish):\n");
+					System.out.println(" Please enter text you want to write on the file (type %% to finish):\n");
 					String line = new String();
 					char escape= '%';
 					char lastch=' ';
@@ -181,7 +181,12 @@ public class BussinessOperationsE implements BOperationsE {
 						for (int i=0;i<line.length();i++) {
 							if (line.charAt(i)==escape || exit) {
 								if (lastch!=escape) {
-									lastch =escape;
+									
+									if(i==line.length()-1) {
+										fos.write(line.charAt(i));
+									}else {
+										lastch =escape;
+									}
 								}else {	
 									exit=true;
 								}
@@ -198,11 +203,11 @@ public class BussinessOperationsE implements BOperationsE {
 					fos.close();
 					System.out.println("Done!");
 				}else {
-					if(!file.exists()) System.out.println("Sorry, file: "+file+" doesn't exists.");
-					if(file.getName().indexOf(".txt")<0) System.out.println("Sorry, file: "+file+" isn't a txt file.");
+					if(!file.exists()) System.out.println("\n Sorry, file: "+file+" doesn't exists.");
+					if(file.exists() && file.getName().indexOf(".txt")<0) System.out.println("\n Sorry, file: "+file+" isn't a txt file.");
 				}
 			}else {
-				System.out.println("Sorry, directory: "+f.getName().replace("//", "/")+" doesn't exists.");
+				System.out.println("\n Sorry, directory: "+f.getName().replace("//", "/")+" doesn't exists.");
 			}
 		}catch (Exception e) {
     		System.out.println("Sorry, try again");
@@ -216,7 +221,7 @@ public class BussinessOperationsE implements BOperationsE {
 			File f = new File(defdirectory);
 			if (f.exists()) {
 				File file = new File(defdirectory+b);
-				if (file.exists()) {
+				if (file.exists() && file.getName().indexOf(".txt")>-1) {
 					System.out.println("Reading file: ");
 					FileReader readfile = new FileReader(file);
 					int leter;
@@ -227,13 +232,14 @@ public class BussinessOperationsE implements BOperationsE {
 					System.out.println(text.replace("\n", "\n "));
 					readfile.close();
 				}else {
-					System.out.println("Sorry, file: "+file+"doesn't exists.");
+					if(!file.exists()) System.out.println("\n Sorry, file: "+file+" doesn't exists.");
+					if(file.exists() && file.getName().indexOf(".txt")<0) System.out.println("\n Sorry, file: "+file+" isn't a txt file.");
 				}
 			}else {
-				System.out.println("Sorry, directory: "+f.getName().replace("//", "/")+"doesn't exists.");
+				System.out.println("\n Sorry, directory: "+f.getName().replace("//", "/")+"doesn't exists.");
 			}
 		}catch (Exception e) {
-    		System.out.println("Sorry, try again");
+    		System.out.println("\n Sorry, try again");
     		System.out.println(e);
     	}
 

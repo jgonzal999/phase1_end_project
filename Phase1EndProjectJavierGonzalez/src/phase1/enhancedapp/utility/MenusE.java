@@ -24,26 +24,26 @@ public class MenusE {
 		System.out.println(" Welcome "+a+" "+b+" have a nice day!!");
 	}	
 	public void insertNew() {
-		System.out.println("Please, enter new file (if not included, it will be added extension .txt): ");
+		System.out.println("Please, enter a new file (if not included, it will be added extension .txt): ");
 	}
 	public void insertDel() {
-		System.out.printf("Please, enter file to delete (full name without path): ");
+		System.out.printf("Please, enter the file to delete (full name without path): ");
 	}
 	public void insertDirectory(String a) {
 		System.out.println("\nWorking directory: "+a.replace("//", "/"));
-		System.out.printf("Please, enter new directory or 'd' for default: ");
+		System.out.printf("Please, enter a new directory or 'd' for default: ");
 	}
 	public void insertsearch() {
-			System.out.printf("Please insert file to search (full name or part of it): ");
+			System.out.printf("Please insert a file to search (full name or part of it): ");
 	}
 	public void insertFile() {
-		System.out.printf("Please, enter an exist file to write to it (full name and .txt mandatory): ");
+		System.out.printf("Please, enter an existing file to write to it (full name and .txt mandatory): ");
 	}
 	public void readFile() {
-		System.out.printf("Please, enter file to read it (full name and .txt mandatory: ");
+		System.out.printf("Please, enter an existing file to read it (full name and .txt mandatory): ");
 	}
 	public void insertText() {
-		System.out.printf("Please, enter text: ");
+		System.out.printf("Please, enter the text: ");
 	}
 	public void cont() {
 		System.out.println("Do you really want to quit the app? (y/n): ");
