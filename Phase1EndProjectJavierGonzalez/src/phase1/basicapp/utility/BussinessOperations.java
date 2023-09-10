@@ -79,8 +79,8 @@ public class BussinessOperations implements BOperations {
 					totaldirectories.add(file.getName());				
 				}
 			}
-//			Collections.sort(totalfiles); This is a already created method, I use mine
-//			Collections.sort(totaldirectories);
+//			Collections.sort(totalfiles); This is an existing method but I have used my own
+//			Collections.sort(totaldirectories); This is an existing method but I have used my own
 //			Quick Sort Method
 			sort(totalfiles,0,totalfiles.size()-1);
 			sort(totaldirectories,0,totaldirectories.size()-1);
